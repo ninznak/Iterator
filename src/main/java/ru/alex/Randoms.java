@@ -6,11 +6,11 @@ import java.util.Iterator;
 import java.util.Random;
 
 public class Randoms implements Iterable<Integer> {
-    private int lowLimit;
-    private int highLimit;
+    private final int lowLimit;
+    private final int highLimit;
     private Random random;
 
-    public Randoms(int low, int high){
+    public Randoms(int low, int high) {
         this.lowLimit = low;
         this.highLimit = high;
         this.random = new Random();
@@ -19,7 +19,7 @@ public class Randoms implements Iterable<Integer> {
     @NotNull
     @Override
     public Iterator<Integer> iterator() {
-        return new Iterator<Integer>() {
+        return new Iterator<>() {
 
             @Override
             public boolean hasNext() {
